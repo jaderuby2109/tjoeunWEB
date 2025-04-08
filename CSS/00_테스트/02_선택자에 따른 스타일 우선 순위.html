@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 우선순위 테스트</title>
+  <style>
+    /* 1. !important 스타일 (우선순위 가장 높음) */
+    .important-style {  color: red !important;          }
+    /* 3. ID 스타일 */
+    #unique-text {      color: orange;                  }
+    /* 4. 클래스 스타일 */
+    .text {             color: green;                   }
+    /* 5. 태그 스타일 */
+    p {                 color: blue;                    }
+  </style>
+</head>
+<body>
+  <p>태그만 있습니다.</p>
+  <p class="text">태그와 클래스가 있습니다.</p>
+  <p id="unique-text" class="text">태그와 클래스와 아이디가 있습니다.</p>
+  <p id="unique-text" class="text" style="color: purple;">인라인 스타일입니다.</p>
+  <!-- 2. 인라인 스타일 -->
+  <p id="unique-text" class="text important-style" style="color: purple;">
+    인라인 스타일이어도 내부 스타일 적용
+  </p>
+</body>
+</html>
