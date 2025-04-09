@@ -1,15 +1,102 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Page</title>
+    <title>Document</title>
+    <style>
+    /* 전체 레이아웃 */
+    body { 
+        margin: 0;                  /* 외부 여백 */
+        padding: 0;                 /* 내부 여백 */
+        height: 100vh;              /* 높이 지정 */
+        display: flex;
+        justify-content: center;    /* 너비 중간 */
+        align-items: center;        /* 높이 중간 */
+        background:                 /* 배경 그라데이션 */
+        radial-gradient(circle at 50% 0, rgba(255,0,0, 0.5), rgba(255,0,0,0) 60%),
+        radial-gradient(circle at 7% 75%, rgba(0,0,255, 0.5), rgba(255,0,0,0) 60%),
+        radial-gradient(circle at 93% 75%, rgba(0,255,0, 0.5), rgba(255,0,0,0) 60%);
+    }
+    /* 로그인 창 */
+    .container {
+        width: 25%;                 /* 페이지 전체에서 차지하는 비중 */
+        min-width: 250px;           /* 최소 너비 */
+        padding: 20px;              /* 내부 여백 */
+        background-color: white;  /* 배경색 */  
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);   /* 그림자 */
+        border-radius: 6px;                       /* 라운드 */
+    }
+    /* 그림 */
+    img {
+        width: 100%;
+    }
+    /* 로그인 요소 */
+    .form-group { 
+        margin-bottom: 15px;        /* 입력 항목 간 간격 */
+    }
+    .form-group:last-child {
+        margin-bottom: 0;           /* 입력 항목 간 간격 */
+    }
+    /* 아이디, 비번 입력 */
+    input[type="text"] {
+        width: 100%;                /* 입력창 너비 */
+        padding: 10px;              /* 입력창 내부 여백 */
+        border: 0px;                /* 외곽선 없애기 */
+        border-bottom: 1px solid black; /* 밑줄 추가 */
+        box-sizing: border-box;     /* 내부 여백 포함한 크기로 */
+    }
+    /* 아이디 저장, 자동 로그인, 카피라이터의 글씨 크기 */
+    label {
+        font-size: 0.8em;           /* 글씨 조금 작게 */
+    }
+    /* 버튼 */
+    button {
+        cursor: pointer;            /* 커서 들어오면 */
+        width: 100%;                /* 버튼 크기 */
+        padding: 15px;              /* 버튼 내부 여백 */
+        border: none;               /* 외곽선 없애기 */
+        border-radius: 4px;         /* 라운드 */
+        font-size: 16px;            /* 글씨 크기 */
+        color: white;             /* 글씨 색 */
+        background-color: cornflowerblue;   /* 배경 색 */
+    }
+</style>
 </head>
 <body>
-    <H1>HTML, CSS, JAVASCRIPT</H1>
-    <UL>
-        <LI><H4>HTML</H4></LI>
-        <LI><H4>CSS</H4></LI>
-    </UL>
+<!-- 전체 영역 -->
+<div class="container">
+    <img src="./img/icon.jpg" alt="로그인 이미지">
+    <!-- 로그인 영역 -->
+    <form action="" method="post">
+        <!-- 아이디 -->
+        <div class="form-group">
+            <input type="text" id="title" name="title" placeholder="아이디" required>
+        </div>
+        <!-- 비밀번호 -->
+        <div class="form-group">
+            <input type="text" id="writer" name="writer" placeholder="비밀번호" required>
+        </div>
+        <!-- 아이디 저장, 자동 로그인 -->
+        <div class="form-group">
+            <input type="checkbox" name="idSave" id="idSave" checked>
+            <label for="idSave">아이디 저장</label> &nbsp;
+            <input type="checkbox" name="autoLogin" id="autoLogin">
+            <label for="autoLogin">자동 로그인</label>
+        </div>
+        <!-- 로그인 -->
+        <div class="form-group">
+            <button type="button">로그인</button>
+        </div>
+        <!-- 회원가입 -->
+        <div class="form-group">
+            <button type="button">회원가입</button>
+        </div>
+        <!-- 카피라이트 -->
+        <div class="form-group">
+            <label>copywrite &copy; 2025 All rights reserved.</label>
+        </div>
+    </form>
+</div>
 </body>
 </html>

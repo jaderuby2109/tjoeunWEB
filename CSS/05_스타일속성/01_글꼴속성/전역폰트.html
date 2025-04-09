@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폰트 예시</title>
+  <style>
+    /* :root : CSS 변수 정의, 전역 스타일 설정
+        html 요소를 지정하는 선택자로, 
+        html 태그 선택자보다 더 높은 우선 순위를 갖는 선택자 */
+    :root {
+      /* CSS 변수 정의 */
+      --main-font: 'Roboto', sans-serif;
+      --highlight-font: 'Georgia', serif;
+    }
+
+    html {
+      /* 전체에 메인 폰트 적용 */
+      font-family: var(--main-font);  
+    }
+
+    h1, .highlight {
+      /* 헤딩이나 특정 강조 요소에 강조 폰트 적용 */
+      font-family: var(--highlight-font);  
+      
+    }
+    a {
+      text-decoration : ;
+    }
+  </style>
+</head>
+<body>
+  <h1>강조 폰트가 적용된 제목입니다</h1>
+  <p>이 문단은 기본 폰트를 사용합니다.</p>
+  <p class="highlight">이 텍스트는 강조 폰트를 사용합니다.</p>
+</body>
+</html>
