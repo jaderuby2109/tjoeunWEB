@@ -25,7 +25,7 @@
     height: 150px;
     background-color: royalblue;
     box-sizing: border-box;
-    transition: all 1s;
+    transition: all 1s;             /* 지정한 시간만큼 요소가 움직임 */
 }
 
 .absolute {

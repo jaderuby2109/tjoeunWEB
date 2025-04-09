@@ -10,8 +10,10 @@
     position: absolute;
     width: calc( 800px * 3 );
     animation-name: slide;
-    animation-duration: 16s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
+    animation-timing-function : linear
+    
 }
 
 .slide img {
@@ -21,7 +23,10 @@
 }
 
 @keyframes slide {
-    33.333% { left: 0; }
-    66.666% { left: calc(-800px * 1); }
+    0% { left: 0; }
+    10% { left: 0; }
+    45% { left: calc(-800px * 1); }
+    55% { left: calc(-800px * 1); }
+    90% { left: calc(-800px * 2); }
     100% { left: calc(-800px * 2); }
 }

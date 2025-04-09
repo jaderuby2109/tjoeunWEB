@@ -12,11 +12,13 @@
     animation-name: slide;
     animation-duration: 16s;
     animation-iteration-count: infinite;
+    animation-timing-function : linear
 }
 
 .slide img {
     width: 800px;
     height: 400px;
+    box-sizing: border-box;
     /* float: left; */
 }
 

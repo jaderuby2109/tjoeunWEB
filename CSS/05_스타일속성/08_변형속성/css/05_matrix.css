@@ -38,7 +38,7 @@
 }
 /* 
     matrix(  )
-    : 6개의 값을 지저하여 요소를 변형
+    : 6개의 값을 지정하여 요소를 변형
     scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()
     
 */
