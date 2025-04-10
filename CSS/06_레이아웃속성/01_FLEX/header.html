@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>헤더</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ul { list-style-type: none; }
+        a { text-decoration: none; color: black; }
+
+        /* 헤더 */
+        header {
+            width: 100%;
+            border: 1px solid black;
+            position: fixed;
+            top: 0;
+        }
+
+        /* util */
+        .util {
+            height: 40px;
+            padding: 10px;
+            background-color: #dce6ff;
+        }
+
+        .util .util-menu {
+            display: flex;
+            justify-content: flex-end;
+            column-gap: 20px;
+        }
+
+        /* menu */
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        /* .menu .menu-left a, 
+        .menu .menu-right a {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            background-color: royalblue;
+            color: white;
+        }
+        .menu .menu-left a span, 
+        .menu .menu-right a span {
+            position: relative;
+            top: 10px;
+            font-size: 32px;
+        } */
+        .menu .menu-left a span, 
+        .menu .menu-right a span {
+            width: 80px;
+            line-height: 80px;
+            position: relative;             /* 위치 값을 지정 가능 */
+            font-size: 32px;
+            text-align: center;
+            color: white;
+            background-color: royalblue;
+        }
+        
+        .menu .menu-cneter nav ul {
+            /* .menu에서 flex를 상속 받았으나 ul 태그는 block이라 다시 flex로 지정 */
+            display: flex;          
+            column-gap: 20px;   /* 항목 간 여백 */
+        }
+
+        .menu .menu-cneter nav ul li {
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .menu .menu-cneter nav ul li a {
+            /* a태그는 inline이 기본 => 높이 너비를 가질 수 없음 => inline-block으로 변경 */
+            display: inline-block;      
+            width: 100%;
+            height: 100%;
+            padding: 0 32px;
+            font-weight: bold;
+        }
+
+        .menu .menu-cneter nav ul li a:hover {
+            background-color: cornflowerblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- util -->
+        <div class="util">
+            <ul class="util-menu">
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+            </ul>
+        </div>
+        <!-- menu -->
+        <div class="menu">
+            <div class="menu-left">
+                <a href=""><span class="material-icons">person</span><!-- 유저아이콘 --></a>
+            </div>
+            <div class="menu-cneter">
+                <nav class="pc">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="board.html">Board</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-right">
+                <a href=""><span class="material-icons">menu</span><!-- 메뉴아이콘 --></a>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
