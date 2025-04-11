@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/02_header.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <!-- 마우스 커서 효과 -->
+    <div class="cursor"></div>
+
+    <header>
+        <!-- 로고 -->
+        <div class="logo">
+            <a href="http://naver.com"><img src="https://placehold.co/132x50" alt="logo"></a>
+        </div>
+
+        <!-- 메뉴 -->
+        <nav id="nav">
+            <ul class="gnb">
+                <li><a href="http://naver.com">Company</a></li>
+                <li><a href="http://naver.com">Service</a></li>
+                <li><a href="http://naver.com">Works</a></li>
+                <li><a href="http://naver.com">Blog</a></li>
+            </ul>
+        </nav>
+
+        <!-- 유틸 -->
+        <!-- .util>(.langs+.sns+.sitemap) -->
+        <div class="util">
+            <div class="langs">
+                <a href="http://naver.com" class="active">KR</a>
+                <a href="http://naver.com">EN</a>
+            </div>
+            <div class="line"></div>
+            <div class="sns">
+                <a href="http://naver.com"><img src="img/naver.svg" alt="naver"></a>
+                <a href="http://naver.com"><img src="img/insta.svg" alt="instagram"></a>
+            </div>
+            <div class="line"></div>
+            <div class="sitemap">
+                <a href="http://naver.com"><span class="material-icons">menu</span></a>
+            </div>
+        </div>
+    </header>
+    <!-- 자바스크립트 작성 영역 -->
+    <script>
+        // shape
+        const shape = document.querySelector('.cursor')
+        // 현재 마우스 포인터 위치
+        document.addEventListener("mousemove", (e) => {
+            shape.style.display = 'block'   /* 마우스 움직이면 보이기 */
+            const x = e.clientX             // 마우스 x 좌표
+            const y = e.clientY             // 마우스 y 좌표
+            shape.style.transform = `
+                translate(${x}px, ${y}px)
+                translate(-50%, -50%)
+            `
+        })
+    </script>
+</body>
+</html>

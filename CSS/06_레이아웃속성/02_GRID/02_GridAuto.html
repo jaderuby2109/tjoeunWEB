@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <link rel="stylesheet" href="css/02_GridAuto.css">
+</head>
+<body>
+<!-- grid-auto-flow -->
+    <h2>grid-auto-flow</h2>
+    <div class="container grid-template">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+    </div>
+
+<!-- grid-auto-rows -->
+    <!-- grid-auto-flow : row -->
+    <h2>grid-auto-flow : row</h2>
+    <div class="container grid-template auto-flow-row">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item span-column">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+    </div>
+
+    <!-- grid-auto-flow : row dense -->
+    <h2>grid-auto-rows : row dense</h2>
+    <div class="container grid-template auto-flow-row-dense">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item span-column">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+    </div>
+
+
+<!-- grid-auto-columns -->
+    <!-- grid-auto-flow : column -->
+    <h2>grid-auto-flow : column</h2>
+    <div class="container grid-template auto-flow-column">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item span-rows">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+    </div>
+
+    <!-- grid-auto-flow : column dense -->
+    <h2>grid-auto-rows : column dense</h2>
+    <div class="container grid-template auto-flow-column-dense">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item span-rows">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+        <div class="item auto-item">+</div>
+    </div>
+
+
+<!-- grid -->
+    <!-- grid-template-rows / grid-template-columns 를 동시에 -->
+    <h2>grid : grid-template-rows / grid-template-columns 를 동시에</h2>
+    <div class="container container1">
+        <div class="item">아이템 1</div>
+        <div class="item">아이템 2</div>
+        <div class="item">아이템 3</div>
+        <div class="item">아이템 4</div>
+    </div>
+
+    <!-- grid-auto-flow , grid-auto-rows / grid-auto-columns 를 동시에 지정하는 단축 속성 -->
+    <h2 style="text-decoration: line-through;">grid-auto-flow , grid-auto-rows / grid-auto-columns</h2>
+    <div class="container container2">
+        <div class="item">아이템 1</div>
+        <div class="item">아이템 2</div>
+        <div class="item">아이템 3</div>
+        <div class="item">아이템 4</div>
+        <div class="item">아이템 5</div>
+    </div>
+
+    <!-- grid-template-areas , grid-template-rows / grid-template-columns 를 동시에 -->
+    <h2>grid : grid-template-areas , grid-template-rows / grid-template-columns 를 동시에</h2>
+    <div class="container container3">
+        <div class="item item1">아이템 1</div>
+        <div class="item item2">아이템 2</div>
+        <div class="item item3">아이템 3</div>
+        <div class="item item4">아이템 4</div>
+    </div>
+
+</body>
+</html>

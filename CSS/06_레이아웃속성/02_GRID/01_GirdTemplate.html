@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <link rel="stylesheet" href="css/01_GirdTemplate.css">
+</head>
+<body>
+    <div class="container">
+        <h2>grid default</h2>
+        <div class="grid-container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <!-- grid-template-rows -->
+        <h2>grid-template-rows : px단위 지정</h2>
+        <div class="grid-container rows-px">
+            <div class="item">50px</div>
+            <div class="item">100px</div>
+            <div class="item">150px</div>
+        </div>
+
+        <h2>grid-template-rows : fr단위 지정</h2>
+        <div class="grid-container rows-fr">
+            <div class="item">1fr</div>
+            <div class="item">2fr</div>
+            <div class="item">1fr</div>
+        </div>
+
+        <h2>grid-template-rows : fr px 복합</h2>
+        <div class="grid-container rows-mix">
+            <div class="item">1fr</div>
+            <div class="item">2fr</div>
+            <div class="item">100px</div>
+        </div>
+
+        <h2>grid-template-rows : 이름 지정</h2>
+        <div class="grid-container rows-name">
+            <div class="item">[row1] 50px</div>
+            <div class="item">[row2] 100px</div>
+            <div class="item">[row3] 150px</div>
+        </div>
+
+        <h2>grid-template-rows : repeat(3, 200px)</h2>
+        <div class="grid-container rows-repeat">
+            <div class="item">repeat(3, 70px)</div>
+            <div class="item">repeat(3, 70px)</div>
+            <div class="item">repeat(3, 70px)</div>
+        </div>
+
+        
+        <!-- grid-template-columns -->
+        <h2>grid-template-columns : fr px 복합</h2>
+        <div class="grid-container columns-mix">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <!-- grid-template-areas -->
+        <h2>grid-template-areas</h2>
+        <div class="grid-container grid-template-areas">
+            <div class="item grid-header">HEADER</div>
+            <div class="item grid-aside">ASIDE</div>
+            <div class="item grid-main">MAIN</div>
+            <div class="item grid-footer">FOOTER</div>
+        </div>
+
+        <h2>grid-template-areas : .기호</h2>
+        <div class="grid-container grid-template-areas-point">
+            <div class="item grid-header">HEADER</div>
+            <div class="item grid-aside">ASIDE</div>
+            <div class="item grid-main">MAIN</div>
+            <div class="item grid-footer">FOOTER</div>
+        </div>
+
+        <!-- grid grid-template -->
+        <h2>grid : grid-template-rows / grid-template-columns</h2>
+        <div class="grid-container grid-rows-columns">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+
+        <h2>grid : grid-template</h2>
+        <div class="grid-container grid-template">
+            <div class="item grid-header">HEADER</div>
+            <div class="item grid-aside">ASIDE</div>
+            <div class="item grid-main">MAIN</div>
+            <div class="item grid-footer">FOOTER</div>
+        </div>
+
+    </div>
+</body>
+</html>

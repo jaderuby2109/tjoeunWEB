@@ -1,0 +1,43 @@
+/* grid */
+.grid-container {
+    display: grid;
+    border: 1px solid lightcoral;
+    padding: 1px;
+    grid-template: repeat(3, 100px) / repeat(3, 100px);
+}
+
+.items {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    background-color: cornflowerblue;
+    box-sizing: border-box;
+}
+
+/* align-items */
+.align-items-start   { align-items: start; }
+.align-items-end     { align-items: end; }
+.align-items-center  { align-items: center; }
+.align-items-stretch { align-items: stretch; }
+.align-items-stretch .items { height: auto; }
+
+/* justify-items */
+.justify-items-start    { justify-items: start; }
+.justify-items-end      { justify-items: end; }
+.justify-items-center   { justify-items: center; }
+.justify-items-stretch  { justify-items: stretch; }
+.justify-items-stretch .items { width: auto; }
+
+/* place-items */
+.place-items-center {
+    place-items: center center;
+    /* align-items      justify-items */
+    /* 아이템 수직정렬    아이템 수평정렬 */
+}
+
+.blank {
+    width: 300px;
+}

@@ -1,0 +1,44 @@
+/* grid */
+.grid-container {
+    display: grid;
+    border: 1px solid lightcoral;
+    padding: 1px;
+    width: 500px;
+    height: 500px;
+    grid-template: repeat(3, 100px) / repeat(3, 100px);
+}
+
+.item {
+    font-size: 30px;
+    color: white;
+    background-color: cornflowerblue;
+    border: 1px dotted black;
+}
+
+/* align-content */
+/* .align { height: 1000px; } */
+.align-start    { align-content: start; }
+.align-end      { align-content: end; }
+.align-center   { align-content: center; }
+.align-between  { align-content: space-between; }
+.align-around   { align-content: space-around; }
+.align-evenly   { align-content: space-evenly; }
+.align-stretch  { align-content: stretch; }
+
+/* justify-content */
+/* .justify         { grid-auto-flow: column; } */
+.justify-start   { grid-auto-flow: column; justify-content: start; }
+.justify-end     { grid-auto-flow: column; justify-content: end; }
+.justify-center  { grid-auto-flow: column; justify-content: center; }
+.justify-between { grid-auto-flow: column; justify-content: space-between; }
+.justify-around  { grid-auto-flow: column; justify-content: space-around; }
+.justify-evenly  { grid-auto-flow: column; justify-content: space-evenly; }
+.justify-stretch { grid-auto-flow: column; justify-content: stretch; }
+
+
+/* place-content */
+.place-center-center {
+    place-content: center center;
+    /* align-content    justify-content */
+    /* 컨텐츠 수직정렬   컨텐츠 수평정렬 */
+}

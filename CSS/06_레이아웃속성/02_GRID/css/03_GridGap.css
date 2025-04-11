@@ -1,0 +1,20 @@
+/* grid */
+.grid-container {
+    display: grid;
+    border: 1px solid lightcoral;
+    padding: 1px;
+    grid-template: repeat(3, 100px) / repeat(3, 100px);
+}
+
+.item {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    background-color: cornflowerblue;
+    border: 1px dotted black;
+}
+
+/* gap */
+.row-gap { row-gap: 10px; }
+.column-gap { column-gap: 10px; }
+.gap { gap: 10px 10px; }
