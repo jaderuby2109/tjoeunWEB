@@ -1,0 +1,16 @@
+/* 헤더 */
+header { height: 100px;}
+
+/* 로고 */
+#logo { width: 220px;height: 100%; }
+#logo img { width: 130px; height: 100%; }
+
+/* 버튼 */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    color: white;
+}
+
