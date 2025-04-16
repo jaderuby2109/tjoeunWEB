@@ -46,7 +46,7 @@ body {
 
 /* ------------------------------------------------- */
 
-.flex { display: flex; }
+.flex { display: flex; flex-wrap: wrap; }
 /* justify-content */
 .flex.justify-content-center { justify-content: center; }
 .flex.justify-content-start { justify-content: start; }
@@ -203,6 +203,7 @@ body {
 /* container */
 .container {
     width: var(--container-size);
+    max-width: 100%;
     margin: auto;
 }
 
@@ -212,3 +213,7 @@ body {
 .order-3 { order: 3; }
 .order-4 { order: 4; }
 .order-5 { order: 5; }
+
+/* width */
+.w-100 { width: 100%; }
+.w-50 { width: 50%; }
