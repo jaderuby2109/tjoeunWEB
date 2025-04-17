@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- ###################### HEADER ###################### -->
     <header>
@@ -31,14 +33,14 @@
         </div>
     </header>
     <!-- ###################### HEADER ###################### -->
-    
+
     <!-- ###################### SECTION1 ###################### -->
     <section id="main">
         <div class="container">
             <p class="title fz-title text-center">
                 Catch! Teenieping
                 <br>
-                & 
+                &
                 <br>
                 Goods
             </p>
@@ -53,7 +55,7 @@
         </div>
     </section>
     <!-- ###################### SECTION1 ###################### -->
-    
+
     <!-- ###################### SECTION2 ###################### -->
     <section id="new" class="card-view py-100">
         <div class="container">
@@ -112,7 +114,7 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
     <!-- ###################### SECTION2 ###################### -->
 
 
@@ -124,7 +126,7 @@
                 <div class="timer-box mt-100 mb-50 flex justify-content-center align-items-center">
                     <p class="label fz-normal">남은 시간</p>
                     <div id="special-timer" class="fz-title text-center">
-                        09 : 54 : 35 
+                        09 : 54 : 35
                     </div>
                 </div>
                 <p class="fz-normal text-center">
@@ -180,7 +182,7 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
     <!-- ###################### SECTION3 ###################### -->
 
     <!-- ###################### SECTION4 ###################### -->
@@ -297,33 +299,33 @@
         </div>
     </section>
     <!-- ###################### SECTION4 ###################### -->
-    
+
     <!-- ###################### FOOTER ###################### -->
     <footer>
         <div class="footer-top py-40">
             <div class="container">
                 <div class="flex justify-content-between align-items-center">
                     <ul class="flex justify-content-between align-items-center gap-10">
-                       <li><a href="">회사소개</a></li> 
-                       <li><span class="line"></span></li>
-                       <li><a href="">이용약관</a></li> 
-                       <li><span class="line"></span></li>
-                       <li><a href="">개인정보처리방침</a></li> 
-                       <li><span class="line"></span></li>
-                       <li><a href="">임직원회원가입</a></li> 
+                        <li><a href="">회사소개</a></li>
+                        <li><span class="line"></span></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><span class="line"></span></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><span class="line"></span></li>
+                        <li><a href="">임직원회원가입</a></li>
                     </ul>
                     <ul class="flex justify-content-between align-items-center gap-10">
-                        <li><a href="">공지사항</a></li> 
+                        <li><a href="">공지사항</a></li>
                         <li><span class="line"></span></li>
-                        <li><a href="">FAQ</a></li> 
+                        <li><a href="">FAQ</a></li>
                         <li><span class="line"></span></li>
-                        <li><a href="">비회원문의</a></li> 
+                        <li><a href="">비회원문의</a></li>
                         <li><span class="line"></span></li>
-                        <li><a href="">대량구매문의</a></li> 
+                        <li><a href="">대량구매문의</a></li>
                         <li><span class="line"></span></li>
-                        <li><a href="">월간BIZ문의</a></li> 
+                        <li><a href="">월간BIZ문의</a></li>
                         <li><span class="line"></span></li>
-                        <li><a href="">FAMILY SITE</a></li> 
+                        <li><a href="">FAMILY SITE</a></li>
                     </ul>
                 </div>
             </div>
@@ -356,6 +358,35 @@
     </footer>
     <!-- ###################### FOOTER ###################### -->
 
+    <script>
+        // 특가 타이머 함수
+        function timer() {
+            // 현재 날짜 시간
+            const now = new Date() ;
 
+            // 내일 자정 (00:00:00)
+            const tomorrow = new Date() ;
+            tomorrow.setHours(24, 0, 0, 0) ; // 오늘 24:00:00 == 내일 00:00:00
+            const diff = tomorrow - now;
+
+            let time = Math.floor(diff / 1000);    // ms -> s 단위로 변환, 소수점 제거
+            let hours = Math.floor(time / (60 * 60));
+            let mins = Math.floor((time % (60 * 60)) / 60);
+            let secs = time % 60
+
+            // leading zero 적용
+            hours = String(hours).padStart(2,'0');
+            mins = String(mins).padStart(2,'0');
+            secs = String(secs).padStart(2,'0');
+
+            const T = `${hours} : ${mins} : ${secs}`;
+
+            let $timer = document.getElementById('special-timer')
+            $timer.textContent = T;
+        }
+
+        setInterval(timer, 1000) ;
+    </script>
 </body>
+
 </html>

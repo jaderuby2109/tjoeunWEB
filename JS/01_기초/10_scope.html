@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            Hoistiong (호이스팅)
+            : 선언을 범위 내애서 코드의 맨 위로 끌어올리는 동작
+            * JavaScript에서는 코드를 실행하기 전에 
+              var 변수 선언, 선언적 함수 등을 호이스팅 합니다.
+        */
+
+        // function 함수 ( 매개변수 ) { }
+        function test() {
+            // 선언만 끌어 올려진다.
+            // 초기화는 따라오지 않는다.
+            console.log(`local : ${local}`) ;
+            
+            var local = 10 ;
+
+            // var는 블록 {} scope를 지원하지 않는다.
+            if (local > 0) {
+                console.log(`local : ${local}`) ;
+                // 같은 함수 scope의 변수, 새로운 변수 아님
+                var local = 20 ;
+                console.log(`local : ${local}`) ;
+            }
+
+            console.log(`local : ${local}`) ;
+        }
+
+        // function 함수 ( 매개변수 ) { }
+        function test2() {
+            // 호이스팅은 가능하나 let으로 정의된 변수는 사용 할 수 없다.
+            // 에러 : console.log(`local2 : ${local2}`) ;
+
+            let local2 = 10 ;
+
+            if (local2 > 0) {
+                // 변수가 블록 범위에서 호이스팅 되어 함수 범위의 변수를 사용하지 못한다.
+                // 에러 : console.log(`local2 : ${local2}`) ;
+                let local2 = 20
+                console.log(`local2 : ${local2}`) ;
+            }
+
+            console.log(`local2 : ${local2}`) ;
+        }
+
+        test()
+        test2()
+
+        /* 
+            var, let 각각 호이스팅 적용됨
+            * let은 호이스팅 되지만, 값이 초기화 되지 않으면 접근 불가 (에러)
+            * var는 호이스팅 되고, 값도 접근할 수 있지만 undefined
+            * 호이스팅은 선언이 끌어올려지는 것이지 초기화가 끌어올려지는 것은 아니다.
+            * let은 블록 스코프를 지원하고, var는 지원하지 않는다.
+         */
+
+        console.log(test3) ;
+        console.log(test4) ;
+
+        var test3 = 'test' ;
+        let test4 = 'test' ;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
