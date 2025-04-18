@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            name ;
+            price ;
+            constructor(name, price = 2000) {
+                this.name = name;
+                this.price = price;
+            }
+            showInfo() {
+                let result =
+                    `${this.name} : ${this.price}`;
+                return result;
+            }
+        }
+
+        let car1 = new Car('차1', 3000);
+        let car2 = new Car('차2', 4000);
+
+        // 인스턴스에 속성 추가
+        // car1.speed = 5000;
+
+        // 프로토타입에 속성 추가
+        Car.prototype.speed = 5000;
+
+        console.log(car1.speed);
+        console.log(car2.speed);
+
+        // 인스턴스의 속성 삭제
+        // delete car1.name;
+
+        delete Car.prototype.name;
+
+        console.log(car1.name);
+        console.log(car2.name);
+
+
+        function User() { }
+        User.prototype.age = 20;
+
+        const u1 = new User();
+
+        delete User.prototype.age;
+        console.log(u1.age);  // undefined
+
+        class Car2 {
+            name;
+            price;
+        }
+
+        let car3 = new Car2();
+        car3.name = '차3' ;
+
+        delete Car2.prototype.name;
+        console.log( car3.name);        
+    </script>
+</body>
+
+</html>

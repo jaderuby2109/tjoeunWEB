@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(name) {
+            this.name = name;
+        }
+
+        // 이동해 옴
+        const p1 = new Person("Alice");
+
+        Person.prototype.sayHello = function () {
+            console.log("Hello, I'm " + this.name);
+        };
+
+        // const p1 = new Person("Alice");
+        // 객체 생성 후 프로토타입 변경해도 이미 생성된 인스턴스에도 반영된다.
+        p1.sayHello();  // Hello, I'm Alice
+
+    </script>
+</body>
+
+</html>
