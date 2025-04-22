@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로 슬라이드</title>
+    <!-- <link rel="stylesheet" href="css/가로슬라이드.css"> -->
+    <style>
+        .container {
+            width: 1200px;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: flex;
+            width: 100%;
+            transition: transform 1s linear;
+        }
+
+        .slide img{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slide" id="slide">
+            <img src="./img/1.jpg" alt="슬라이드1">
+            <img src="./img/2.jpg" alt="슬라이드2">
+            <img src="./img/3.jpg" alt="슬라이드3">
+        </div>
+    </div>
+
+    <!-- <script src="js/가로슬라이드.js"></script> -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="jQuery/가로슬라이드.js"></script>
+</body>
+
+</html>

@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
         // 사이즈만큼 슬라이드
         animate(-size);
         // index 계산
-        index = (index +1) % count ;
-        next = (index +1) % count ;
+        index = (index + 1) % count;
+        next = (index + 1) % count;
 
         // 다음 슬라이드로 전환
         setTimeout(() => {
-           slides.innerHTML = '' 
+            slides.innerHTML = ''
         }, timeout);
     }
 

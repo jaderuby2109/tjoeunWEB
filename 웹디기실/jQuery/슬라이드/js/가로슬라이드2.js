@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
         for (let i = 0; i < slides.length; i++) {
             const slide = slides[i];
             slide.style.transform
-             = `translateX( calc(${size}px * -${index}) )`
+                = `translateX( calc(${size}px * -${index}) )`
         }
     }
 
-    setInterval( slide, 3000 )
+    setInterval(slide, 3000)
 })

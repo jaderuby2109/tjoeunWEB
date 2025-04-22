@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
         for (let i = 0; i < slides.length; i++) {
             const slide = slides[i];
-            slide.style.opacity = 0 ;
+            slide.style.opacity = 0;
         }
-        slides[index].style.opacity = 1 ;
+        slides[index].style.opacity = 1;
     }
 
     setInterval(slide, 3000);

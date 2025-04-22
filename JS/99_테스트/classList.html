@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .addClass {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id='h1'>안녕하세요</h1>
+
+    <!-- <h1 id="h1" class="addClass" name="addName" style="color: red;">안녕하세요</h1> -->
+
+    <script>
+        document.getElementById('h1').style.color = 'red';
+        document.getElementById('h1').classList.add('addClass');
+        document.getElementById('h1').setAttribute('name', 'addName');
+    </script>
+</body>
+
+</html>
